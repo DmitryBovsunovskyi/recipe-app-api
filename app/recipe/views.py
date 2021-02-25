@@ -8,8 +8,8 @@ from recipe import serializers
 
 
 class BaseRepiceAttrViewset(viewsets.GenericViewSet,
-                 mixins.ListModelMixin,
-                 mixins.CreateModelMixin):
+                            mixins.ListModelMixin,
+                            mixins.CreateModelMixin):
     """
     Base viewset of user owned recipe attributes
     """
