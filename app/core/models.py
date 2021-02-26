@@ -27,6 +27,7 @@ class UserManager(BaseUserManager):
         """
         if not email:
             raise ValueError('Users must have email address!')
+        # normalize_email func makes email lowercase in case user provides Uppercase
         user = self.model(email=self.normalize_email(email), **extra_fields)
         #password has to be encrypted so we need to use set_password function
         user.set_password(password)
